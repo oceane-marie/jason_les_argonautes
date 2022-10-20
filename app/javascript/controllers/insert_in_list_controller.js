@@ -8,23 +8,27 @@ export default class extends Controller {
     console.log(this.element)
     console.log(this.namesTarget)
     console.log(this.formTarget)
+    console.log(this.formTarget.action)
   }
 
   send(event) {
     event.preventDefault()
     console.log("TODO: send request in AJAX")
     console.log(this.formTarget.action)
-    fetch(this.formTarget.action, {
+    const url = this.formTarget.action;
+    const options = {
       method: "POST",
       headers: { "Accept": "application/json" },
       body: new FormData(this.formTarget)
-    })
+    }
+    fetch(url, options)
     .then(response => response.json())
     .then((data) => {
-      if (data.inserted_name) {
-        this.namesTarget.insertAdjacentHTML("beforeend", data.inserted_name)
-      }
-      this.formTarget.outerHTML = data.form
+      console.log(data)
+      // if (data.inserted_name) {
+      //   this.namesTarget.insertAdjacentHTML("beforeend", data.inserted_name)
+      // }
+      // this.formTarget.outerHTML = data.form
     })
   }
 }

@@ -10,10 +10,18 @@
 <main>
   <div data-controller="insert-in-list">
     <!-- New member form -->
-    <%= render 'argonautes/form', argonautes: @argonautes %>
+
+    <%= render 'form', argonaute: @argonaute %>
 
     <!-- Member list -->
-    <%= render 'argonautes/list', argonautes: @argonautes %>
+    <h2>Membres de l'équipage</h2>
+    <div data-insert-in-list-target="names">
+      <section class="member-list">
+        <% @argonautes.each do |argonaute| %>
+          <%= render 'list', argonaute: argonaute %>
+        <% end %>
+      </section>
+    </div>
 
   </div>
 </main>
