@@ -7,11 +7,11 @@ class ArgonautesController < ApplicationController
 
   def create
     @argonaute = Argonaute.new(argonaute_params)
-    if @argonaute.save
-      redirect_to root_path
-    else
-      render :root
-    end
+    # if @argonaute.save
+    #   redirect_to root_path
+    # else
+    #   render :root
+    # end
     respond_to do |format|
       if @review.save
         format.html { redirect_to root_path }

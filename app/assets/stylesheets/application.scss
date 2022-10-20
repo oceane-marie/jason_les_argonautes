@@ -63,3 +63,9 @@ footer {
   background: #f76c6c;
   padding: 0.25em 0;
 }
+
+.member-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}

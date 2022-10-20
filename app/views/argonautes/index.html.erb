@@ -18,7 +18,9 @@
     <div data-insert-in-list-target="names">
       <section class="member-list">
         <% @argonautes.each do |argonaute| %>
+        <div class="member-item">
           <%= render 'list', argonaute: argonaute %>
+        </div>
         <% end %>
       </section>
     </div>
