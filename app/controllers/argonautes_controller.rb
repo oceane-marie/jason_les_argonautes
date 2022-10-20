@@ -12,6 +12,15 @@ class ArgonautesController < ApplicationController
     else
       render :root
     end
+    respond_to do |format|
+      if @review.save
+        format.html { redirect_to root_path }
+        format.json
+      else
+        format.html { render :root, status: :unprocessable_entity }
+        format.json
+      end
+    end
   end
 
   private
@@ -19,4 +28,5 @@ class ArgonautesController < ApplicationController
   def argonaute_params
     params.require(:argonaute).permit(:name)
   end
+
 end

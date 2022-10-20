@@ -10,25 +10,12 @@
 <main>
   <div data-controller="insert-in-list">
     <!-- New member form -->
-    <h2>Ajouter un(e) Argonaute</h2>
-      <%= simple_form_for [@argonaute],
-      data: { insert_in_list_target: "form",
-              action: "submit->insert-in-list#send"
-            } do |f| %>
-        <%= f.input :name %>
-        <%= f.button :submit %>
-      <% end %>
+    <%= render 'argonautes/form', argonautes: @argonautes %>
 
     <!-- Member list -->
-    <h2>Membres de l'équipage</h2>
-    <div data-insert-in-list-target="names">
-      <section class="member-list">
-        <% @argonautes.each do |argonaute| %>
-          <p><%= argonaute.name %></p>
-        <% end %>
-      </section>
-    </div>
-</div>
+    <%= render 'argonautes/list', argonautes: @argonautes %>
+
+  </div>
 </main>
 
 <footer>
