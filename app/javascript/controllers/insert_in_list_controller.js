@@ -12,8 +12,8 @@ export default class extends Controller {
 
   send(event) {
     event.preventDefault()
-
     console.log("TODO: send request in AJAX")
+    console.log(this.formTarget.action)
     fetch(this.formTarget.action, {
       method: "POST",
       headers: { "Accept": "application/json" },
