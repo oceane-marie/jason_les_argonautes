@@ -1,0 +1,36 @@
+<h1>Jason et les argonautes</h1>
+<header>
+  <h1>
+    <img src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png" alt="Wild Code School logo"/>
+    Les Argonautes
+  </h1>
+</header>
+
+<!-- Main section -->
+<main>
+  <div data-controller="insert-in-list">
+    <!-- New member form -->
+    <h2>Ajouter un(e) Argonaute</h2>
+      <%= simple_form_for [@argonaute],
+      data: { insert_in_list_target: "form",
+              action: "submit->insert-in-list#send"
+            } do |f| %>
+        <%= f.input :name %>
+        <%= f.button :submit %>
+      <% end %>
+
+    <!-- Member list -->
+    <h2>Membres de l'équipage</h2>
+    <div data-insert-in-list-target="names">
+      <section class="member-list">
+        <% @argonautes.each do |argonaute| %>
+          <p><%= argonaute.name %></p>
+        <% end %>
+      </section>
+    </div>
+</div>
+</main>
+
+<footer>
+  <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
+</footer>
