@@ -16,7 +16,23 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  background-color: $creme;
+  color: $onyx;
+  h1, h2{
+    font-family: 'GFS Neohellenic', sans-serif;
+  }
+  h1{
+    font-size: 64px;
+    text-align: center;
+  }
+  h2{
+    font-size: 32px;
+  }
+  p{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+  }
 }
 
 main {
@@ -25,22 +41,14 @@ main {
 }
 
 header {
-  background: #f4f4f4;
   text-align: center;
   padding: 2em;
-}
-
-header img {
-  max-width: 96px;
 }
 
 header h1 {
   font-size: 2.5em;
 }
 
-h1, h2 {
-  text-align: center;
-}
 
 label {
   display: block;
@@ -58,11 +66,19 @@ label {
 
 footer {
   margin-top: 2em;
-  text-align: center;
-  color: #fff;
-  background: #f76c6c;
-  padding: 0.25em 0;
+  padding: 36px 72px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #C6C5B9;
+  color: #FFFDF7;
 }
+
+footer img {
+  width: 150px;
+  padding-right: 36px;
+}
+
 
 .member-list{
   display: flex;
