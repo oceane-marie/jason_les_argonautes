@@ -11,11 +11,12 @@
           <!-- New member form -->
           <%= simple_form_for [@argonaute] do |f| %>
             <h2><%= f.label :name %></h2>
-            <p></p><%= f.input_field :name %>
-            <p></p><%= f.button :submit, "Ajouter un argonaute", id:"btn-create" %>
+            <p class="input-field"><%= f.input_field :name %></p>
+            <p class="btn-centered"><%= f.button :submit, "Ajouter un argonaute", id:"btn-create" %></p>
           <% end %>
 
     <!-- Member list -->
+      <div class="list-section">
         <h2>Membres de l'équipage</h2>
         <div data-insert-in-list-target="names">
           <section class="member-list" id="list">
@@ -26,6 +27,7 @@
             <% end %>
           </section>
         </div>
+      </div>
       </div>
     </div>
   </div>

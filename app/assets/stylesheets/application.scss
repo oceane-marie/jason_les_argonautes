@@ -18,6 +18,10 @@ body {
   margin: 0;
   background-color: $creme;
   color: $onyx;
+  height: 100vh;
+  h1, h2, p{
+    margin: 0;
+  }
   h1, h2{
     font-family: 'GFS Neohellenic', sans-serif;
   }
@@ -31,18 +35,22 @@ body {
   p{
     font-size: 20px;
     font-family: 'Source Sans Pro', sans-serif;
-    margin: 0;
   }
 }
 
 main {
   max-width: 960px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 header {
   text-align: center;
   padding: 2em;
+  background-color: #C6C5B9;
+  color: $creme;
+  margin-bottom: 2em;
 }
 
 header h1 {
@@ -52,7 +60,6 @@ header h1 {
 
 label {
   display: block;
-  margin-bottom: 0.5em;
 }
 
 .new-member-form {
@@ -79,9 +86,60 @@ footer img {
   padding-right: 36px;
 }
 
-
 .member-list{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.list-section{
+  padding-top: 52px;
+}
+
+.card-ctr{
+  display: flex;
+  border-radius: 12px;
+  background-color: $light-blue;
+  height: 58vh;
+  img{
+    border-radius: 12px 0px 0px 12px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.card-content{
+  padding: 18px;
+}
+
+// styling the form
+#argonaute_name{
+  background-color: $light-blue;
+  border-bottom: 3px solid $onyx;
+  border: 2px solid $light-blue;
+}
+
+.input-field {
+  border-bottom: 2px solid $onyx;
+}
+
+input:focus {
+  outline:none;
+}
+
+#btn-create{
+  background-color: $dark-blue;
+  border-radius: 6px;
+  color: $creme;
+  font-weight: 600;
+  margin: 12px;
+  padding: 6px 12px;
+}
+
+.btn-centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
