@@ -15,10 +15,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-  margin: 0;
+  // margin: 0;
   background-color: $creme;
   color: $onyx;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 88vw;
   h1, h2, p{
     margin: 0;
   }
@@ -47,7 +50,7 @@ main {
 
 header {
   text-align: center;
-  padding: 2em;
+  padding: 18px 0px;
   background-color: #C6C5B9;
   color: $creme;
   margin-bottom: 2em;
@@ -66,7 +69,7 @@ label {
 
 footer {
   margin-top: 2em;
-  padding: 36px 72px;
+  padding: 18px 72px;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -85,7 +88,7 @@ footer img {
   display: flex;
   border-radius: 12px;
   background-color: $light-blue;
-  height: 59vh;
+  // height: 56vh;
   box-shadow: 0px 8px 24px rgba(84, 106, 123, 0.7);
   img{
     border-radius: 12px 0px 0px 12px;
