@@ -30,10 +30,10 @@ body {
     text-align: center;
   }
   h2{
-    font-size: 32px;
+    font-size: 24px;
   }
   p{
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
   }
 }
@@ -51,6 +51,7 @@ header {
   background-color: #C6C5B9;
   color: $creme;
   margin-bottom: 2em;
+  box-shadow: 0px 8px 24px rgba(198, 197, 185, 0.7);
 }
 
 header h1 {
@@ -62,14 +63,6 @@ label {
   display: block;
 }
 
-.new-member-form {
-  margin: 2em 0 4em 0;
-  text-align: center;
-}
-
-.member-item {
-  padding: 0.25em 0;
-}
 
 footer {
   margin-top: 2em;
@@ -79,6 +72,7 @@ footer {
   justify-content: start;
   background-color: #C6C5B9;
   color: #FFFDF7;
+  box-shadow: 0px -8px 24px rgba(198, 197, 185, 0.7);
 }
 
 footer img {
@@ -86,22 +80,13 @@ footer img {
   padding-right: 36px;
 }
 
-.member-list{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.list-section{
-  padding-top: 52px;
-}
-
+// styling the card container (+img)
 .card-ctr{
   display: flex;
   border-radius: 12px;
   background-color: $light-blue;
-  height: 58vh;
+  height: 59vh;
+  box-shadow: 0px 8px 24px rgba(84, 106, 123, 0.7);
   img{
     border-radius: 12px 0px 0px 12px;
     height: 100%;
@@ -110,19 +95,31 @@ footer img {
   }
 }
 
+// playing with JS
+.creme{
+  color: $creme;
+}
+
+.onyx-border{
+  border-bottom: 2px solid $onyx;
+}
+
+.creme-border{
+  border-bottom: 2px solid $creme;
+}
+
+// styling the right (form + list) side of the card
 .card-content{
-  padding: 18px;
+  padding: 36px;
 }
 
 // styling the form
 #argonaute_name{
   background-color: $light-blue;
-  border-bottom: 3px solid $onyx;
   border: 2px solid $light-blue;
 }
 
 .input-field {
-  border-bottom: 2px solid $onyx;
 }
 
 input:focus {
@@ -134,12 +131,27 @@ input:focus {
   border-radius: 6px;
   color: $creme;
   font-weight: 600;
-  margin: 12px;
-  padding: 6px 12px;
+  margin: 24px;
+  padding: 10px 20px
 }
 
 .btn-centered{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+// styling the list
+.center {
+  text-align: center;
+}
+.member-item {
+  padding: 6px 12px;
+}
+
+.member-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
