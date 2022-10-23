@@ -18,9 +18,8 @@ body {
   margin: 0;
   background-color: $creme;
   color: $onyx;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  height: 100vh;
   h1, h2, p{
     margin: 0;
   }
@@ -42,7 +41,7 @@ body {
 
 main {
   max-width: 960px;
-  margin: 0 auto;
+  margin: 78px auto;
   display: flex;
   justify-content: center;
 }
@@ -52,7 +51,6 @@ header {
   padding: 18px 0px;
   background-color: #C6C5B9;
   color: $creme;
-  margin-bottom: 2em;
   box-shadow: 0px 8px 24px rgba(198, 197, 185, 0.7);
 }
 
@@ -67,7 +65,9 @@ label {
 
 
 footer {
-  margin-top: 2em;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
   padding: 18px 72px;
   display: flex;
   align-items: center;
@@ -85,9 +85,10 @@ footer img {
 // styling the card container (+img)
 .card-ctr{
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 12px;
   background-color: $light-blue;
-  margin: 3px;
   box-shadow: 0px 8px 24px rgba(84, 106, 123, 0.7);
   img{
     border-radius: 12px 0px 0px 12px;
